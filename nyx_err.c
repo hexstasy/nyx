@@ -5,14 +5,14 @@
 static void must_err(const char * msg);
 static void default_err(const char * msg);
 
-void proc_err(nyx_err_t code) {
+void proc_err(enum nyx_err_t code) {
     switch(code) {
         case NYX_ERR_OK:
             return;
         case NYX_ERR_ALLOC:
             must_err("failed allocation memory");
             break;
-        case NYX_INVALID_ARG:
+        case NYX_ERR_INVALID_ARG:
             default_err("invalid argument in func");
             break;
         case NYX_ERR_NULL:
@@ -25,7 +25,7 @@ void proc_err(nyx_err_t code) {
 }
 
 static void must_err(const char * msg) {
-    fprintf(stderr, "critical error: %s\m", msg);
+    fprintf(stderr, "critical error: %s\n", msg);
     exit(-1);
 }
 

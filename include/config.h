@@ -1,3 +1,3 @@
 #pragma once
 
-#define NYX_VERSION "0.0.1 beta"
+#define NYX_VERSION "0.0.1-beta"
