@@ -18,6 +18,8 @@ void proc_err(enum nyx_err_t code) {
         case NYX_ERR_NULL:
             must_err("value is null");
             break;
+        case NYX_ERR_CIPHER: 
+            must_err("encryption error");
         default:
             default_err("undefined error");
             break;

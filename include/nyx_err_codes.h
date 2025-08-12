@@ -6,4 +6,5 @@ enum nyx_err_t {
     NYX_ERR_INVALID_ARG,
     NYX_ERR_UNDEFINED,
     NYX_ERR_ALLOC,
+    NYX_ERR_CIPHER,
 };
